@@ -7,7 +7,14 @@ RSpec.feature "Profile Picture", type: :feature do
     click_button 'Log Out'
   end
 
-  scenario "A has a profile picture" do
+  scenario "A user has a default profile picture" do
+    # need to work out how to test for image uploads
+    click_button 'View your profile'
+    click_button 'Edit your profile'
+    expect(page).to have_xpath("My image")
+  end
+
+  scenario "A user can upload a profile picture" do
     # need to work out how to test for image uploads
     click_button 'View your profile'
     click_button 'Edit your profile'
