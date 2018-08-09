@@ -8,7 +8,13 @@
   <% end %>
 </div>
 
-<h2><%= @user.first_name %>'s profile%></h2>
+<h2><%= @user.first_name %>'s profile</h2>
+
+<div>
+  <%= link_to user_bio_path(@user.id) do %>
+    Edit Your Bio
+  <% end %>
+</div>
 
 <% @posts.reverse.each do |post| %>
   <p><%= post.users.first_name %></p>

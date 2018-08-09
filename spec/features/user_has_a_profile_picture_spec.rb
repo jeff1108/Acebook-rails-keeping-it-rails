@@ -13,5 +13,5 @@ RSpec.feature "Profile Picture", type: :feature do
     click_button 'Edit your profile'
     expect(page).to have_xpath("My image")
   end
-  
+
 end
