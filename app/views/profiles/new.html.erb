@@ -1,10 +1,12 @@
 <h1>hello world</h1>
 
-<%= form_for @profile do |f| %>
-  <%= hidden_field_tag :user_id, @user.id %>
-  <%= f.label :summary %>
-  <%= f.text_field :summary %></br>
-  <%= f.label :image %>
-  <%= f.file_field :image %></br>
-  <%= f.submit "Update Profile" %>
+<%= form_for @profile do |form| %>
+<%= form.hidden_field :user_id, :value => @user.id %>
+<%= form.label :avatar %>
+<%= form.file_field :avatar, accept: 'image/png,image/jpeg'%>
+<%= form.label :summary%>
+<%= form.text_area :summary %>
+<%= form.submit "Post Image" %>
 <% end %>
+
+<p><%= flash[:alert] %></p>

@@ -18,8 +18,10 @@ class ProfilesController < ApplicationController
    private
 
    def profile_params
-     # params.require(:profile).permit(:summary, :image, :user_id)
-      { summary: params[:summary], image: params[:image], user_id: params[:user_id] }
+     # params.require(:profile).permit(:image, :summary, :user_id)
+      # { image: params[:image], summary: params[:summary], user_id: params[:user_id] }
+
+      { avatar: "1111", summary: "222", user_id: params[:user_id] }
    end
 
 end
