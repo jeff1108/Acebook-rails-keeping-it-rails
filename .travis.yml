@@ -22,13 +22,13 @@ deploy:
   skip_cleanup: true
   provider: heroku
   api_key:
-    secure: "AqEneaLDht/PU4XN/eUbff4ki36Zt1WmH2VOqZrKqErSDQJ+FriG92xzR/QP1oi4rdpdAFPUFnSGh74XsmgJchZ+Uqg07I/cS82W9g
+    secure: AqEneaLDht/PU4XN/eUbff4ki36Zt1WmH2VOqZrKqErSDQJ+FriG92xzR/QP1oi4rdpdAFPUFnSGh74XsmgJchZ+Uqg07I/cS82W9g
 aWiVkMe1n5XrP22mnP6423X4aeh6mOjgUQZ9pSI+19oi3WXMV7F4rSTTCFhhIivtQ1/scTQqSU54nAJs55IxE2sCzyg7oe2xj46aYGa3Z23PcR9N0
 NwYfRkYy1LjhCVgJsPQbffLLKRVuvIev/AZqPQZlf2BH2ZhCtlexJG3lsCsDB7t4r7KuvLzcey4hPffWNIRzzpahjqO1wxHkQhefiadMg/2tprKmO
 DdZD9BYNmDOK6lyP2NcAVIqXQc6RecxKNxXYx9toYfvp6mN4GoP29Qv28MgynF0K8wnCibYLTXIf9oAYylf13QyHE2dl2XJw822zepV+v2iHGI3gJ
 jTDf9e5W48DVcuYTmNHrgRmi7vJFBj/cV/HGOlt+4M0Lgc/R/eA569lcNzj1B+eZUpxl/yzcVqSEqx2FxV+LS2eGtUF01Fey0sM/i2CLqByAQtGqZ
 mA3RG+8vlDzlTXeyZ4KuGhyirHflhfVCK2TUtS0CPW3ADIaWFFafujIjiGwGk0z1oULOJRE4xdoUHLiM9EKnNB94XUIWwYYfv1VjtTeTRcJJOW4mS
-yuMR2nfv+BFaLjmo="
+yuMR2nfv+BFaLjmo=
   app: acebook-rails-keeping-it-rails
   on:
     repo: jeff1108/acebook-rails-keeping-it-rails
