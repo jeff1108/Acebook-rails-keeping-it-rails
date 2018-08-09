@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'session#destroy'
 
   resources :users do
-    resources :avatars
+    resources :bio
     resources :posts do
       resources :likes
     end
