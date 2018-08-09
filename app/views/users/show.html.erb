@@ -6,14 +6,36 @@
   <%= link_to '/' do %>
     Home
   <% end %>
+</div>
 
-  <%= link_to new_user_profile_path(@user) do %>
-    Create profile
+<div>
+
+  <% if @profile %>
+    <%= image_tag(@profile.avatar.url) %> </br>
   <% end %>
+    <h2> About <%= @user.first_name.capitalize %>: </h2>
+    <% if @profile %>
+      <p>
+      <%= @profile.summary %>
+      </p>
+    <% end %>
+</div>
+<div>
+
+  <% if @profile.nil? %>
+    <%= link_to new_user_profile_path(@user) do %>
+      Create profile
+    <% end %>
+  <% else %>
+    <%= link_to edit_user_profile_path(@user) do %>
+      Edit profile
+    <% end %>
+  <% end %>
+
 </div>
 
 <% @posts.reverse.each do |post| %>
-  <p><%= post.users.first_name %></p>
+  <p><%= post.users.first_name.capitalize %> says:</p>
   <p><%= post.message %></p>
   <p><%= time_ago_in_words(post.created_at) %></p>
 

@@ -1,4 +1,4 @@
-<h1>hello world</h1>
+<h1>Update your profile</h1>
 
 <%= form_for @profile do |form| %>
   <%= hidden_field_tag :user_id, @user.id %>
@@ -6,6 +6,7 @@
   <%= file_field_tag :avatar %>
   <%= label_tag "Summary" %>
   <%= text_field_tag :summary %>
+  <%= link_to '<button type="button">Cancel</button>'.html_safe, user_path(@user) %>
   <%= form.submit "Update profile" %>
 <% end %>
 
