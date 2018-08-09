@@ -1,0 +1,9 @@
+<h1>hello world</h1>
+
+<%= form_for @profile do |f| %>
+  <%= f.label :summary %><br>
+  <%= f.text_field :summary %>
+  <%= f.label :image %><br>
+  <%= f.file_field :image %>
+  <%= f.submit "Update Profile" %>
+<% end %>

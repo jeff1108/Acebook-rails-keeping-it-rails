@@ -6,6 +6,10 @@
   <%= link_to '/' do %>
     Home
   <% end %>
+
+  <%= link_to new_user_profile_path(@user) do %>
+    Edit profile
+  <% end %>
 </div>
 
 <% @posts.reverse.each do |post| %>
