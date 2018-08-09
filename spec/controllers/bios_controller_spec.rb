@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe BioController, type: :controller do
 
-  describe "POST /users/:id/bio" do
+  describe "POST /users/:id/bios" do
 
     # before(:each) do
     #   @user = User.create(first_name: "test_first_name", last_name: "test_last_name", email: "test_email@keepingitrails.com", password: "pa55w0rd")
