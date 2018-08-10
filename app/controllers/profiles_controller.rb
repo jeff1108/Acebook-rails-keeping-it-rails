@@ -40,7 +40,7 @@ class ProfilesController < ApplicationController
    def profile_params
      # params.permit(:avatar, :summary, :user_id)
       # { image: params[:image], summary: params[:summary], user_id: params[:user_id] }
-      { avatar: params[:avatar], summary: params[:summary], user_id: params[:user_id] }
+      { avatar: params[:image], summary: params[:summary], user_id: params[:user_id] }
    end
 
 end
