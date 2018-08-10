@@ -11,7 +11,7 @@
 <div>
 
   <% if @profile %>
-    <%= image_tag(@profile.avatar.url) %> </br>
+    <%= image_tag(@profile.image.url) %> </br>
   <% end %>
     <h2> About <%= @user.first_name.capitalize %>: </h2>
     <% if @profile %>
