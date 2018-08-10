@@ -17,22 +17,22 @@ class ProfilesController < ApplicationController
      end
    end
 
-   # def edit
-   #   @profile = Profile.find(params[:id])
-   #   @user = User.find(session[:current_user_id])
-   # end
-   #
-   # def update
-   #  @profile = Profile.find(params[:id])
-   #  @user = User.find(session[:current_user_id])
-   #
-   #  if @profile.update(profile_params)
-   #    redirect_to user_path(@user)
-   #    flash[:notice] = "Profile updated"
-   #  else
-   #    flash[:alert] = "Something wrong with your file"
-   #    render :edit
-   #  end
+   def edit
+    @user = User.find(session[:current_user_id])
+    @profile = Profile.where(user_id: @user.id).first
+   end
+
+   def update
+    @profile = Profile.where(user_id: params[:user_id])
+    @user = User.find(params[:user_id])
+
+    if @profile.update(profile_params)
+      redirect_to user_path(@user)
+      flash[:notice] = "Profile updated222"
+    else
+      flash[:alert] = "Something wrong with your file"
+      render :edit
+    end
   end
 
 
