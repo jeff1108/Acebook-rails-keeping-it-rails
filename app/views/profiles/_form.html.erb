@@ -12,16 +12,17 @@
   <% end %>
 
   <div class="field">
+    <%= form.hidden_field :user_id, @user.id %>
     <%= form.label :summary %>
     <%= form.text_field :summary, id: :profile_summary %>
   </div>
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.text_field :image, id: :profile_image %>
+    <%= form.file_field :image, id: :profile_image %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Update Profile" %>
   </div>
 <% end %>

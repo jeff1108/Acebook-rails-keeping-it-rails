@@ -15,15 +15,19 @@ class ProfilesController < ApplicationController
   # GET /profiles/new
   def new
     @profile = Profile.new
+    @user = User.find(session[:current_user_id])
   end
 
   # GET /profiles/1/edit
   def edit
+    @user = User.find(session[:current_user_id])
+    @profile = Profile.find_by(user_id: @user.id)
   end
 
   # POST /profiles
   # POST /profiles.json
   def create
+    @user = User.find(session[:current_user_id])
     @profile = Profile.new(profile_params)
 
     respond_to do |format|
@@ -42,7 +46,7 @@ class ProfilesController < ApplicationController
   def update
     respond_to do |format|
       if @profile.update(profile_params)
-        format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
+        format.html { redirect_to user_path(@user), notice: 'Profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @profile }
       else
         format.html { render :edit }
@@ -69,6 +73,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:summary, :image)
+      params.require(:profile).permit(:summary, :image, :user_id)
     end
 end
